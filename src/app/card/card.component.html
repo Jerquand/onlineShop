@@ -20,8 +20,8 @@
             </div>
             <div class="col-md-4 col-sm-12"> 
                 <div class="row">
-                        <div class="shopCart"  *ngIf="cart$ | async as cart">
-                           <ng-container *ngIf="cart">
+                        <ng-container *ngIf="cart$ | async as cart">
+                            <div class="shopCart"  *ngIf="cart.getTotlCount != 0 && cart.getTotlCount != null">
                            <p>Order Summery</p>
                             <hr>
                             <div class="summery-Body">
@@ -43,8 +43,8 @@
                                     Check Out
                                 </button>
                             </div>
-                        </ng-container>
                         </div>
+                    </ng-container>
                   
                 </div>
            

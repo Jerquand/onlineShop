@@ -1,4 +1,5 @@
-<ng-container *ngIf="cart;else noCart">
+<div *ngIf="cart;else noCart">
+<ng-container *ngIf="(cart.getTotlCount != 0 && cart.getTotlCount != null);else nocartselect">
 <div class="container">
     <div class="card ">
         <div class="card-header">
@@ -80,11 +81,24 @@
 </div>
 </div>
 </ng-container>
+<ng-template #nocartselect>
+    <div>
+        <h3>Shopping Order</h3>
+        <hr>
+        <h5>Items (0) </h5> 
+       
+        <div class="alert alert-warning"  role="alert">
+            <h5> Your Cart is Empty , Cannot Check Out without select items ...  </h5>  
+          </div> 
+    </div>
+</ng-template>
+</div>
 <ng-template #noCart>
     <div>
         <h3>Shopping Order</h3>
         <hr>
         <h5>Items (0) </h5> 
+       
         <div class="alert alert-warning"  role="alert">
             <h5> Your Cart is Empty , Cannot Check Out without select items ...  </h5>  
           </div> 
