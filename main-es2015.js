@@ -2514,8 +2514,7 @@ let ProductsComponent = class ProductsComponent {
             this.SearchProducts.sort((a, b) => b.payload.val().price - a.payload.val().price);
         }
         else {
-            this.search = '';
-            this.router.navigate(['/products'], { relativeTo: this.route });
+            this.SearchProducts.sort((a, b) => 0.5 - Math.random());
         }
     }
     ngOnDestroy() {

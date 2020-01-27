@@ -4735,9 +4735,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               return b.payload.val().price - a.payload.val().price;
             });
           } else {
-            this.search = '';
-            this.router.navigate(['/products'], {
-              relativeTo: this.route
+            this.SearchProducts.sort(function (a, b) {
+              return 0.5 - Math.random();
             });
           }
         }
